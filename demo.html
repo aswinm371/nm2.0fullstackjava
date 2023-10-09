@@ -1,0 +1,52 @@
+<html>
+<head>
+<title> Demo Project </title>
+<style>
+h1{padding-top:50px;font-family:Arial;}
+div{font-family:Arial;}
+#sub{font-family:Times New Roman; font-size:0.45cm;}
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	var i=0;
+	var col=new Array("red","green","orange","blue","yellow","purple","white","brown","cyan");
+	function change()
+	{
+		document.body.style.backgroundColor=col[i];
+		i++;
+		if(i>col.length)
+		{
+			i=0;
+		}
+		window.setTimeout("change()",750);
+	}
+	window.onload=change();
+	
+	function display()
+	{
+		alert("Record Inserted");
+	}
+
+</script>
+<center>
+<h1><i><big> Registration Page</big></i> </h1></br></br></br></br>
+<div>
+<label for="name">Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="text" name="name" required></br></br>
+
+<label for="dob"> Date of Birth &nbsp</label>
+<input type="date" name="dob" required></br></br>
+
+<label for="username">Username&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="text" name="username" required></br></br>
+
+<label for="password">Password&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+<input type="password" name="password" required></br></br></br></br>
+
+<input type="submit" id="sub" value="Register" onclick="display()"></br></br>
+</center>
+</div>
+</body>
+</html>
